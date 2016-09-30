@@ -3,6 +3,13 @@
 	{% load crispy_forms_tags %}
 	{% load static %}
 	{% block head_title %}Welcome |{% endblock %}
+	<style type="text/css">
+		{% block style %}
+			
+
+		{% endblock %}
+	</style>
+
 	{% block jumbotron_content %}
 	<div class="jumbotron">
 	<div class="row">
@@ -27,8 +34,8 @@
 <div class="row">
 
 	<div class = "col-sm-3 pull-right">
-	<p class="lead">{{title}}</p>
-	
+	<p class="lead text-align-center">{{title}}</p>
+
 	<form method="POST" action="">{% csrf_token %}
 	{{form|crispy}}
 	<input class="btn btn-lg btn-primary" type="submit" value="Submit">
@@ -36,15 +43,15 @@
 </div>
 <div class="col-sm-3">
 		
-		<p class="lead">Built with Django &amp; Bootstrap</p>
+		<p class="lead text-align-center">Built with Django &amp; Bootstrap</p>
 	</div>
 	<div class="col-sm-3">
 		
-		<p class="lead">created for stater for all kinds</p>
+		<p class="lead text-align-center">created for stater for all kinds</p>
 	</div>
 	<div class="col-sm-3">
 		
-		<p class="lead">Always open source</p>
+		<p class="lead text-align-center">Always open source</p>
 	</div>
 </div>
 {% endblock %}
