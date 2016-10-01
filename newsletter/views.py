@@ -23,10 +23,12 @@ def home(request):
 	return render(request,"home.html", context)
 
 def contact(request):
+	title = 'Contact Us'
 	form = ContactForm(request.POST or None)
 	
 	context ={
-		"form": form
+		"form": form,
+		"title":title,
 	}
 	return render(request,"forms.html", context)
 
